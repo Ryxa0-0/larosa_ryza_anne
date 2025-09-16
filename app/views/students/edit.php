@@ -9,7 +9,7 @@
 <div class="max-w-lg w-full mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg p-8">
     <h1 class="text-3xl font-bold mb-6 text-pink-500">Edit Student</h1>
 
-    <form action="<?= site_url('students/update/'.segment(4)) ?>" method="POST" class="space-y-5">
+    <form action="<?= site_url('students/edit/'.segment(4)) ?>" method="POST" class="space-y-5">
         <div>
             <label class="block font-semibold text-blue-500">Last Name</label>
             <input type="text" name="last_name" 

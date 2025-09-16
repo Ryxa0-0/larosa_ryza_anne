@@ -35,9 +35,8 @@ class Students extends Controller {
 
         $this->StudentModel->insert($data);
 
-        // Redirect to students list
-        header("Location: /students/index");
-        exit;
+        // Redirect to students list    
+        redirect('');
     }
 
     public function edit($id)
@@ -62,8 +61,7 @@ class Students extends Controller {
 
         $this->StudentModel->update($id, $data);
 
-        header("Location: /students/index");
-        exit;
+        redirect('');
     }
 
 
@@ -72,16 +70,13 @@ class Students extends Controller {
         // Delete the record
         $this->StudentModel->delete($id);
 
-        // Redirect back to the students list
-        header('Location: /students/index');
-        exit;
+        redirect('');
     }
 
     public function delete_all()
     {
         $this->StudentModel->truncate();
-        header("Location: /students/index");
-        exit;
+    redirect('');
     }
 
 }
