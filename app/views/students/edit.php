@@ -13,21 +13,21 @@
         <div>
             <label class="block font-semibold text-blue-500">Last Name</label>
             <input type="text" name="last_name" 
-                   value="<?= html_escape(old('last_name', $student['last_name'])) ?>" 
+                   value="<?= isset($_POST['last_name']) ? html_escape($_POST['last_name']) : html_escape($student['last_name']) ?>" 
                    class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
         </div>
 
         <div>
             <label class="block font-semibold text-blue-500">First Name</label>
             <input type="text" name="first_name" 
-                   value="<?= html_escape(old('first_name', $student['first_name'])) ?>" 
+                   value="<?= isset($_POST['first_name']) ? html_escape($_POST['first_name']) : html_escape($student['first_name']) ?>" 
                    class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
         </div>
 
         <div>
             <label class="block font-semibold text-blue-500">Email</label>
             <input type="email" name="email" 
-                   value="<?= html_escape(old('email', $student['email'])) ?>" 
+                   value="<?= isset($_POST['email']) ? html_escape($_POST['email']) : html_escape($student['email']) ?>" 
                    class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
         </div>
 
