@@ -8,21 +8,21 @@
 <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-blue-100 to-pink-200 p-8">
     <div class="max-w-lg w-full mx-auto bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8">
         <h2 class="text-3xl font-bold mb-6 text-pink-500">Add New Student</h2>
-        <form action="/students/store" method="post" class="space-y-5">
+        <form action="<?= site_url('students/create/'.segment(4)) ?>" method="post" class="space-y-5">
             <div>
                 <label class="block font-semibold text-blue-500">Last Name</label>
-                <input type="text" name="last_name" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
+                <input type="text" name="last_name" value="<?= html_escape(old('last_name', isset($student['last_name']) ? $student['last_name'] : '')) ?>" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
             </div>
             <div>
                 <label class="block font-semibold text-blue-500">First Name</label>
-                <input type="text" name="first_name" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
+                <input type="text" name="first_name" value="<?= html_escape(old('first_name', isset($student['first_name']) ? $student['first_name'] : '')) ?>" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
             </div>
             <div>
                 <label class="block font-semibold text-blue-500">Email</label>
-                <input type="email" name="email" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
+                <input type="email" name="email" value="<?= html_escape(old('email', isset($student['email']) ? $student['email'] : '')) ?>" class="w-full border border-blue-200 focus:border-pink-300 focus:ring focus:ring-pink-100 px-3 py-2 rounded-lg bg-pink-50/30" required>
             </div>
             <div class="flex justify-between">
-                <a href="/students/index" class="bg-pink-300 hover:bg-pink-400 text-white px-5 py-2 rounded-lg shadow">⬅ Back</a>
+                <a href="<?= site_url('students/index') ?>" class="bg-pink-300 hover:bg-pink-400 text-white px-5 py-2 rounded-lg shadow">⬅ Back</a>
                 <button type="submit" class="bg-blue-300 hover:bg-blue-400 text-white px-5 py-2 rounded-lg shadow">💾 Save</button>
             </div>
         </form>
