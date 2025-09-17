@@ -8,7 +8,7 @@
 <body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-blue-100 to-pink-200 p-8">
     <div class="max-w-lg w-full mx-auto bg-white/80 backdrop-blur-sm shadow-lg rounded-2xl p-8">
         <h2 class="text-3xl font-bold mb-6 text-pink-500">Add New Student</h2>
-        <form action="<?= site_url('students/create/'.segment(4)) ?>" method="post" class="space-y-5">
+        <form action="<?= site_url('students/store') ?>" method="post" class="space-y-5">
             <div>
                 <label class="block font-semibold text-blue-500">Last Name</label>
                 <input type="text" name="last_name" 

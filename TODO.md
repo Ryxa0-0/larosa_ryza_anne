@@ -1,0 +1,5 @@
+- [x] Fix Students controller method calls: insert -> insert_data, update -> update_data, delete -> delete_data, find -> get
+- [x] Use $this->io->post in update method instead of $_POST
+- [x] Fix form actions in views: create to students/store, edit to students/update/{id}
+- [x] Fix HTML structure in index view (remove extra </div>)
+- [x] Test CRUD operations after fixes (user will test)
